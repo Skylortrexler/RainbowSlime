@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "crimsonslimes:slime_white_block",
+    "crimsonslimes:slime_orange_block",
+    "crimsonslimes:slime_magenta_block",
+    "crimsonslimes:slime_light_blue_block",
+    "crimsonslimes:slime_yellow_block",
+    "crimsonslimes:slime_lime_block",
+    "crimsonslimes:slime_pink_block",
+    "crimsonslimes:slime_gray_block",
+    "crimsonslimes:slime_light_gray_block",
+    "crimsonslimes:slime_cyan_block",
+    "crimsonslimes:slime_blue_block",
+    "crimsonslimes:slime_brown_block",
+    "crimsonslimes:slime_green_block",
+    "crimsonslimes:slime_red_block",
+    "crimsonslimes:slime_black_block",
+    "crimsonslimes:slime_purple_block",
+    "crimsonslimes:slime_missing_block"
+  ]
+}

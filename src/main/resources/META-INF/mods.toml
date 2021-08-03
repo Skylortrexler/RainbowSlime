@@ -1,0 +1,13 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="GPLv3"
+issueTrackerURL="https://github.com/MeinKraft/Crimson-Slimes/issues"
+
+[[mods]]
+modId="crimsonslimes"
+updateJSONURL = "https://github.com/MeinKraft/Crimson-Slimes/raw/main/update.json"
+version="1.17.1-1.0.0"
+displayName="Crimson Slimes"
+authors="§4Crimson_Fluff"
+logoFile="logo.png"
+description=''' Slimey Slime Slimes '''

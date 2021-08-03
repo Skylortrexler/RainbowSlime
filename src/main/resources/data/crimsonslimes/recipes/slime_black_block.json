@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "crimsonslimes:slime_ball_black"
+    }
+  },
+  "result": {
+    "item": "crimsonslimes:slime_black_block"
+  }
+}
