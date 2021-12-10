@@ -10,11 +10,17 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+// /summon crimsonslimes:crimson_slime ~ ~ ~ {CustomName:"\"Slimey McSlime Face\"", Size:2}
+// /summon crimsonslimes:crimson_slime ~ ~ ~ {CustomName:"\"Slimey McSlime Face\"", Size:2, Colour:9}
+// /kill @e[type=!player]
 
 @Mod(CrimsonSlimes.MOD_ID)
 public class CrimsonSlimes {
     public static final String MOD_ID = "crimsonslimes";
-//    public static final Logger LOGGER = LogManager.getLogger(CrimsonSlimes.MOD_ID);
+    public static final Logger LOGGER = LogManager.getLogger(CrimsonSlimes.MOD_ID);
 
     public CrimsonSlimes() {
         entitiesInit.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());

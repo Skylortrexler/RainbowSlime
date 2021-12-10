@@ -1,70 +1,15 @@
 package crimsonfluff.crimsonslimes.init;
 
 import crimsonfluff.crimsonslimes.CrimsonSlimes;
-import crimsonfluff.crimsonslimes.items.CrimsonSpawnEggItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class itemsInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CrimsonSlimes.MOD_ID);
 
-// Slime Spawn Eggs
-    public static final RegistryObject<Item> SLIME_WHITE_SPAWN_EGG = ITEMS.register("slime_white_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_WHITE, 0xFFFFFF, MaterialColor.SNOW.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_ORANGE_SPAWN_EGG = ITEMS.register("slime_orange_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_ORANGE, 14804727, MaterialColor.COLOR_ORANGE.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_MAGENTA_SPAWN_EGG = ITEMS.register("slime_magenta_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_MAGENTA, 14804727, MaterialColor.COLOR_MAGENTA.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_LIGHT_BLUE_SPAWN_EGG = ITEMS.register("slime_light_blue_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_LIGHT_BLUE, 14804727, MaterialColor.COLOR_LIGHT_BLUE.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_YELLOW_SPAWN_EGG = ITEMS.register("slime_yellow_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_YELLOW, 14804727, MaterialColor.COLOR_YELLOW.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_LIME_SPAWN_EGG = ITEMS.register("slime_lime_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_LIME, 14804727, MaterialColor.COLOR_LIGHT_GREEN.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_PINK_SPAWN_EGG = ITEMS.register("slime_pink_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_PINK, 14804727, MaterialColor.COLOR_PINK.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_GRAY_SPAWN_EGG = ITEMS.register("slime_gray_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_GRAY, 14804727, MaterialColor.COLOR_GRAY.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_LIGHT_GRAY_SPAWN_EGG = ITEMS.register("slime_light_gray_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_LIGHT_GRAY, 14804727, MaterialColor.COLOR_LIGHT_GRAY.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_CYAN_SPAWN_EGG = ITEMS.register("slime_cyan_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_CYAN, 14804727, MaterialColor.COLOR_CYAN.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_BLUE_SPAWN_EGG = ITEMS.register("slime_blue_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_BLUE, 14804727, MaterialColor.COLOR_LIGHT_BLUE.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_BROWN_SPAWN_EGG = ITEMS.register("slime_brown_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_BROWN, 14804727, MaterialColor.COLOR_BROWN.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_GREEN_SPAWN_EGG = ITEMS.register("slime_green_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_GREEN, 14804727, MaterialColor.COLOR_GREEN.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_RED_SPAWN_EGG = ITEMS.register("slime_red_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_RED, 14804727, MaterialColor.COLOR_RED.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_BLACK_SPAWN_EGG = ITEMS.register("slime_black_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_BLACK, 14804727, MaterialColor.COLOR_BLACK.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_PURPLE_SPAWN_EGG = ITEMS.register("slime_purple_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_PURPLE, 14804727, MaterialColor.COLOR_PURPLE.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    public static final RegistryObject<Item> SLIME_MISSING_SPAWN_EGG = ITEMS.register("slime_missing_spawn_egg",
-        ()-> new CrimsonSpawnEggItem(entitiesInit.SLIME_MISSING, 14804727, MaterialColor.COLOR_PINK.col, new Item.Properties().tab(CrimsonSlimes.TAB)));
-
-    
 // Slime Blocks
     public static final RegistryObject<Item> SLIME_WHITE_BLOCK = ITEMS.register("slime_white_block",
         ()-> new BlockItem(blocksInit.SLIME_WHITE_BLOCK.get(), new Item.Properties().tab(CrimsonSlimes.TAB)));
