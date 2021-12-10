@@ -183,7 +183,7 @@ public class CrimsonSlimeEntity extends Slime {
             return removeAction(component);
 
         else
-            return new TextComponent(getTypeName().getString() + " (" + new TranslatableComponent("colour.crimsonslimes." + this.entityData.get(DATA_COLOUR)).getString() + ")");
+            return new TextComponent(getTypeName().getString() + " (" + new TranslatableComponent("colour." + this.entityData.get(DATA_COLOUR)).getString() + ")");
     }
 
     private static Component removeAction(Component p_20141_) {
