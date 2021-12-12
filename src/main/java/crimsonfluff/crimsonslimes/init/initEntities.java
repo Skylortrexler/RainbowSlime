@@ -14,8 +14,9 @@ import net.minecraft.world.Heightmap;
 
 public class initEntities {
     public static final EntityType<CrimsonSlimeEntity> SLIME = Registry.register(Registry.ENTITY_TYPE, new Identifier(CrimsonSlimes.MOD_ID, "slime"),
-        FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CrimsonSlimeEntity::new).dimensions(EntityDimensions.fixed(2.4f, 2.4f)).build());
-//    public static final EntityType<CrimsonSlimeEntity> SLIME = Registry.register(Registry.ENTITY_TYPE, new Identifier(CrimsonSlimes.MOD_ID, "slime"),
+        FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, CrimsonSlimeEntity::new).dimensions(EntityDimensions.changing(2.04f, 2.04f)).build());
+
+    //    public static final EntityType<CrimsonSlimeEntity> SLIME = Registry.register(Registry.ENTITY_TYPE, new Identifier(CrimsonSlimes.MOD_ID, "slime"),
 //        FabricEntityTypeBuilder.createMob().spawnGroup(SpawnGroup.MONSTER)
 //                .spawnRestriction(SpawnRestriction.Location.NO_RESTRICTIONS, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
 //                        (animal, world, reason, pos, random) -> SlimeEntity::canSpawn)
