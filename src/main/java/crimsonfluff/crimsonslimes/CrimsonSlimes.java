@@ -1,38 +1,76 @@
 package crimsonfluff.crimsonslimes;
 
-import crimsonfluff.crimsonslimes.init.blocksInit;
-import crimsonfluff.crimsonslimes.init.entitiesInit;
-import crimsonfluff.crimsonslimes.init.itemsInit;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import crimsonfluff.crimsonslimes.entity.CrimsonSlimeEntity;
+import crimsonfluff.crimsonslimes.init.initAttributes;
+import crimsonfluff.crimsonslimes.init.initBlocks;
+import crimsonfluff.crimsonslimes.init.initEntities;
+import crimsonfluff.crimsonslimes.init.initItems;
+import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.biome.v1.ModificationPhase;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.SpawnGroup;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.BuiltinRegistries;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.world.biome.SpawnSettings;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// /summon crimsonslimes:crimson_slime ~ ~ ~ {CustomName:"\"Slimey McSlime Face\"", Size:2}
-// /summon crimsonslimes:crimson_slime ~ ~ ~ {CustomName:"\"Slimey McSlime Face\"", Size:2, Colour:9}
-// /kill @e[type=!player]
+import java.util.List;
 
-@Mod(CrimsonSlimes.MOD_ID)
-public class CrimsonSlimes {
+//  /summon crimsonslimes:slime ~ ~ ~ {Size:3}
+//  /summon crimsonslimes:slime ~ ~ ~ {Colour:5}
+
+public class CrimsonSlimes implements ModInitializer {
     public static final String MOD_ID = "crimsonslimes";
-    public static final Logger LOGGER = LogManager.getLogger(CrimsonSlimes.MOD_ID);
+    public static final Logger LOGGER = LogManager.getLogger(CrimsonSlimes.class);
+    public static final ItemGroup CREATIVE_TAB = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "tab"), () -> new ItemStack(initBlocks.SLIME_MISSING_BLOCK));
 
-    public CrimsonSlimes() {
-        entitiesInit.ENTITIES.register(FMLJavaModLoadingContext.get().getModEventBus());
-        itemsInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        blocksInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    @Override
+    public void onInitialize() {
+        initItems.register();
+        initBlocks.register();
+        initAttributes.register();
 
-        MinecraftForge.EVENT_BUS.register(this);
+//        Identifier slimeID = Registry.ENTITY_TYPE.getId(EntityType.SLIME);
+//        BuiltinRegistries.BIOME.forEach(biome -> {
+//            List<SpawnSettings.SpawnEntry> spawns = biome.getSpawnSettings().getSpawnEntries(SpawnGroup.MONSTER).getEntries();
+//
+//            if (spawns.stream().anyMatch(tag -> tag.type == EntityType.SLIME)) {
+//                BiomeModifications.create(slimeID).add(ModificationPhase.REMOVALS, BiomeSelectors.categories(biome.getCategory()), context -> {
+//                    context.getSpawnSettings().removeSpawnsOfEntityType(EntityType.SLIME);
+//                });
+//
+//                BiomeModifications.addSpawn(BiomeSelectors.categories(biome.getCategory()), SpawnGroup.MONSTER, initEntities.SLIME, 10, 4, 6);
+////                LOGGER.info("Biome: " + biome);
+//            }
+//        });
+
+        // Vanilla Slime from SpawnEgg/Spawner/Summon
+        ServerEntityEvents.ENTITY_LOAD.register((entity, serverWorld) -> {
+            if (entity.getType() == EntityType.SLIME) {
+                entity.remove(Entity.RemovalReason.DISCARDED);
+
+                CrimsonSlimeEntity mimic = initEntities.SLIME.create(serverWorld);
+                if (mimic != null) {
+                    mimic.copyPositionAndRotation(entity);
+
+                    NbtCompound nbtCompound = entity.writeNbt(new NbtCompound());
+                    nbtCompound.remove("Dimension");
+                    nbtCompound.remove("UUID");
+                    mimic.readNbt(nbtCompound);
+
+                    serverWorld.spawnEntity(mimic);
+                }
+            }
+        });
     }
-
-    public static final CreativeModeTab TAB = new CreativeModeTab(CrimsonSlimes.MOD_ID) {
-        @OnlyIn(Dist.CLIENT)
-        @Override
-        public ItemStack makeIcon() { return new ItemStack(blocksInit.SLIME_LIME_BLOCK.get()); }
-    };
 }

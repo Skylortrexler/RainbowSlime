@@ -1,17 +1,10 @@
 {
-  "homepage": "https://www.curseforge.com/minecraft/mc-mods/",
+  "homepage": "https://www.curseforge.com/minecraft/mc-mods/crimson-slimes",
   "promos": {
-    "1.17.1-latest": "1.0.2",
-    "1.17.1-recommended": "1.0.2",
-    "1.18-latest": "1.0.0",
-    "1.18-recommended": "1.0.0"
+    "1.18.1-latest": "1.0.0",
+    "1.18.1-recommended": "1.0.0"
   },
-  "1.17.1": {
-    "1.0.0": "Initial Release. MC 1.17.1, Forge 37.0.8",
-    "1.0.1": "Missing Wool Texture/Block. Re-worked textures",
-    "1.0.2": "Forge 37.0.44. Override Vanilla Slimes. Single Slime Entity. Use Vanilla Spawn Egg. Better Loot Control. Transparent Blocks"
-  },
-  "1.18": {
-    "1.0.0": "Initial Release. MC 1.18, Forge 38.0.14.  Shows colour in name"
+  "1.18.1": {
+    "1.0.0": "Fabric 1.18.1, v0.12.11. Minecraft 1.18.1 - SINGLE entity"
   }
 }
