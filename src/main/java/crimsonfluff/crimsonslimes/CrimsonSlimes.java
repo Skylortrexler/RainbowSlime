@@ -31,7 +31,7 @@ import java.util.List;
 
 public class CrimsonSlimes implements ModInitializer {
     public static final String MOD_ID = "crimsonslimes";
-    public static final Logger LOGGER = LogManager.getLogger(CrimsonSlimes.class);
+    //public static final Logger LOGGER = LogManager.getLogger(CrimsonSlimes.class);
     public static final ItemGroup CREATIVE_TAB = FabricItemGroupBuilder.build(new Identifier(MOD_ID, "tab"), () -> new ItemStack(initBlocks.SLIME_MISSING_BLOCK));
 
     @Override
