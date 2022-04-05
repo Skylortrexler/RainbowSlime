@@ -15,8 +15,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.Identifier;
 
-//  /summon crimsonslimes:slime ~ ~ ~ {Size:3}
-//  /summon crimsonslimes:slime ~ ~ ~ {Colour:5}
+//  /summon rainbowslime:slime ~ ~ ~ {Size:3}
+//  /summon rainbowslime:slime ~ ~ ~ {Colour:5}
 
 public class RainbowSlime implements ModInitializer {
     public static final String MOD_ID = "rainbowslime";
@@ -27,20 +27,6 @@ public class RainbowSlime implements ModInitializer {
         initItems.register();
         initBlocks.register();
         initAttributes.register();
-
-//        Identifier slimeID = Registry.ENTITY_TYPE.getId(EntityType.SLIME);
-//        BuiltinRegistries.BIOME.forEach(biome -> {
-//            List<SpawnSettings.SpawnEntry> spawns = biome.getSpawnSettings().getSpawnEntries(SpawnGroup.MONSTER).getEntries();
-//
-//            if (spawns.stream().anyMatch(tag -> tag.type == EntityType.SLIME)) {
-//                BiomeModifications.create(slimeID).add(ModificationPhase.REMOVALS, BiomeSelectors.categories(biome.getCategory()), context -> {
-//                    context.getSpawnSettings().removeSpawnsOfEntityType(EntityType.SLIME);
-//                });
-//
-//                BiomeModifications.addSpawn(BiomeSelectors.categories(biome.getCategory()), SpawnGroup.MONSTER, initEntities.SLIME, 10, 4, 6);
-////                LOGGER.info("Biome: " + biome);
-//            }
-//        });
 
         // Vanilla Slime from SpawnEgg/Spawner/Summon
         ServerEntityEvents.ENTITY_LOAD.register((entity, serverWorld) -> {
@@ -65,3 +51,4 @@ public class RainbowSlime implements ModInitializer {
 }
 //todo patreon skins
 //todo config
+//todo clear slime

@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "rainbowslime:slime_balls"
+    },{
+      "tag": "rainbowslime:slime_balls"
+    },{
+      "tag": "rainbowslime:slime_balls"
+    },{
+      "tag": "rainbowslime:slime_balls"
+    },{
+      "tag": "rainbowslime:slime_balls"
+    },{
+      "tag": "rainbowslime:slime_balls"
+    },{
+      "tag": "rainbowslime:slime_balls"
+    },{
+      "tag": "rainbowslime:slime_balls"
+    },
+    {
+      "item": "minecraft:lime_dye"
+    }
+  ],
+  "result": {
+    "item": "rainbowslime:slime_ball_lime",
+    "count": 8
+  }
+}
