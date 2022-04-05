@@ -63,3 +63,5 @@ public class RainbowSlime implements ModInitializer {
         });
     }
 }
+//todo patreon skins
+//todo config
