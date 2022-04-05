@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "rainbowslime:slime_ball_cyan"
+    }
+  ],
+  "result": {
+    "item": "minecraft:slime_ball",
+    "count": 1
+  }
+}
