@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "rainbowslime:slime_ball_white"
+    }
+  },
+  "result": {
+    "item": "rainbowslime:slime_white_block"
+  }
+}

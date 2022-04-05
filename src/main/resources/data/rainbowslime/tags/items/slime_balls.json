@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:slime_ball",
+    "rainbowslime:slime_ball_white",
+    "rainbowslime:slime_ball_orange",
+    "rainbowslime:slime_ball_magenta",
+    "rainbowslime:slime_ball_light_blue",
+    "rainbowslime:slime_ball_yellow",
+    "rainbowslime:slime_ball_lime",
+    "rainbowslime:slime_ball_pink",
+    "rainbowslime:slime_ball_gray",
+    "rainbowslime:slime_ball_light_gray",
+    "rainbowslime:slime_ball_cyan",
+    "rainbowslime:slime_ball_blue",
+    "rainbowslime:slime_ball_brown",
+    "rainbowslime:slime_ball_green",
+    "rainbowslime:slime_ball_red",
+    "rainbowslime:slime_ball_black",
+    "rainbowslime:slime_ball_purple",
+    "rainbowslime:slime_ball_missing"
+  ]
+}

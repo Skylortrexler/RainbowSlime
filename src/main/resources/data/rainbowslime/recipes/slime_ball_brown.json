@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "rainbowslime:slime_brown_block"
+    }
+  ],
+  "result": {
+    "item": "rainbowslime:slime_ball_brown",
+    "count": 9
+  }
+}

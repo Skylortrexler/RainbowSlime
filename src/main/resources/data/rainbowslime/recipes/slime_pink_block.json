@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "rainbowslime:slime_ball_pink"
+    }
+  },
+  "result": {
+    "item": "rainbowslime:slime_pink_block"
+  }
+}

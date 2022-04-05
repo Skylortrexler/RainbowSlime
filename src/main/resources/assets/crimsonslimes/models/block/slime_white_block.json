@@ -1,6 +1,0 @@
-{   "parent": "block/slime_block",
-    "textures": {
-        "particle": "crimsonslimes:block/slime_white_block",
-        "texture": "crimsonslimes:block/slime_white_block"
-    }
-}

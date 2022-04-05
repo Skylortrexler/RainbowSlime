@@ -1,0 +1,6 @@
+{   "parent": "block/slime_block",
+    "textures": {
+        "particle": "rainbowslime:block/slime_white_block",
+        "texture": "rainbowslime:block/slime_white_block"
+    }
+}

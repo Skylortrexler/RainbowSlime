@@ -1,22 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "crimsonslimes",
+  "id": "rainbowslime",
   "version": "${version}",
-  "name": "Crimson Slimes",
-  "description": "Coloured Slimes for All",
+  "name": "Rainbow Slimes",
+  "description": "Multi-color slimes, that work with vanilla",
   "authors": [
-    "CrimsonFluff"
+    "SkylorBeck",
+    "Patrons:",
+    "Striker99974",
+    "TheNoobGamer07",
+    "Scar13t",
+    "Kynan"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/crimson-slimes",
-    "sources": "https://github.com/CrimsonFluff/Crimson-Slimes"
+    "homepage": "https://www.skylorbeck.website",
+    "source": "https://github.com/Skylortrexler/iconicwands",
+    "repo": "https://github.com/Skylortrexler/iconicwands",
+    "issues": "https://github.com/Skylortrexler/iconicwands/issues"
   },
   "license": "GPL-3.0",
-  "icon": "assets/crimsonslimes/logo.png",
+  "icon": "assets/rainbowslime/logo.png",
   "environment": "*",
   "entrypoints": {
-    "client": ["crimsonfluff.crimsonslimes.client.initClient"],
-    "main": ["crimsonfluff.crimsonslimes.CrimsonSlimes"]
+    "client": ["minecraft.skylorbeck.website.rainbowslime.client.initClient"],
+    "main": ["minecraft.skylorbeck.website.rainbowslime.RainbowSlime"]
   },
   "depends": {
     "minecraft": "1.18.2",
