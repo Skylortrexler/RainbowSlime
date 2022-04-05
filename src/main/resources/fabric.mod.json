@@ -23,7 +23,8 @@
   "environment": "*",
   "entrypoints": {
     "client": ["minecraft.skylorbeck.website.rainbowslime.client.initClient"],
-    "main": ["minecraft.skylorbeck.website.rainbowslime.RainbowSlime"]
+    "main": ["minecraft.skylorbeck.website.rainbowslime.RainbowSlime"],
+    "modmenu": ["minecraft.skylorbeck.website.rainbowslime.ModMenuIntegration"]
   },
   "depends": {
     "minecraft": "1.18.2",

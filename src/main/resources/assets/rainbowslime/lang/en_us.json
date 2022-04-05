@@ -39,6 +39,8 @@
   "item.rainbowslime.slime_ball_purple": "Purple Slime Ball",
   "item.rainbowslime.slime_ball_missing": "'Missing' Slime Ball",
 
+ "text.autoconfig.rainbowslime.option.spawnChance": "Rainbow Replacement Chance %",
+
   "colour.0": "White",
   "colour.1": "Orange",
   "colour.2": "Magenta",
