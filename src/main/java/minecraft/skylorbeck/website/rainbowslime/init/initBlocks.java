@@ -8,6 +8,7 @@ import net.minecraft.util.registry.Registry;
 
 public class initBlocks {
     public static final Block SLIME_MISSING_BLOCK = new SlimeBlock(AbstractBlock.Settings.of(Material.ORGANIC_PRODUCT, MapColor.PINK).slipperiness(0.8F).sounds(BlockSoundGroup.SLIME).nonOpaque());
+    public static final Block SLIME_CLEAR_BLOCK = new SlimeBlock(AbstractBlock.Settings.of(Material.ORGANIC_PRODUCT, MapColor.PINK).slipperiness(0.8F).sounds(BlockSoundGroup.SLIME).nonOpaque());
     public static final Block SLIME_WHITE_BLOCK = new SlimeBlock(AbstractBlock.Settings.of(Material.ORGANIC_PRODUCT, MapColor.PINK).slipperiness(0.8F).sounds(BlockSoundGroup.SLIME).nonOpaque());
     public static final Block SLIME_ORANGE_BLOCK = new SlimeBlock(AbstractBlock.Settings.of(Material.ORGANIC_PRODUCT, MapColor.PINK).slipperiness(0.8F).sounds(BlockSoundGroup.SLIME).nonOpaque());
     public static final Block SLIME_MAGENTA_BLOCK = new SlimeBlock(AbstractBlock.Settings.of(Material.ORGANIC_PRODUCT, MapColor.PINK).slipperiness(0.8F).sounds(BlockSoundGroup.SLIME).nonOpaque());
@@ -27,6 +28,7 @@ public class initBlocks {
 
     public static void register() {
         Registry.register(Registry.BLOCK, new Identifier(RainbowSlime.MOD_ID, "slime_missing_block"), SLIME_MISSING_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(RainbowSlime.MOD_ID, "slime_clear_block"), SLIME_CLEAR_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(RainbowSlime.MOD_ID, "slime_white_block"), SLIME_WHITE_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(RainbowSlime.MOD_ID, "slime_orange_block"), SLIME_ORANGE_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier(RainbowSlime.MOD_ID, "slime_magenta_block"), SLIME_MAGENTA_BLOCK);

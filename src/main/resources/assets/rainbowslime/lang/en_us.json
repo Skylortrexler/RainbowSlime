@@ -20,6 +20,7 @@
  "block.rainbowslime.slime_black_block": "Black Slime Block",
  "block.rainbowslime.slime_purple_block": "Purple Slime Block",
  "block.rainbowslime.slime_missing_block": "'Missing' Slime Block",
+ "block.rainbowslime.slime_clear_block": "Clear Slime Block",
 
   "item.rainbowslime.slime_ball_white": "White Slime Ball",
   "item.rainbowslime.slime_ball_orange": "Orange Slime Ball",
@@ -38,8 +39,10 @@
   "item.rainbowslime.slime_ball_black": "Black Slime Ball",
   "item.rainbowslime.slime_ball_purple": "Purple Slime Ball",
   "item.rainbowslime.slime_ball_missing": "'Missing' Slime Ball",
+  "item.rainbowslime.slime_ball_clear": "Clear Slime Ball",
 
  "text.autoconfig.rainbowslime.option.spawnChance": "Rainbow Replacement Chance %",
+ "text.autoconfig.rainbowslime.option.specialChance": "Special Replacement Chance %",
 
   "colour.0": "White",
   "colour.1": "Orange",
@@ -57,5 +60,6 @@
   "colour.13": "Green",
   "colour.14": "Red",
   "colour.15": "Black",
-  "colour.16": "'Missing'"
+  "colour.16": "'Missing'",
+  "colour.17": "Clear"
 }

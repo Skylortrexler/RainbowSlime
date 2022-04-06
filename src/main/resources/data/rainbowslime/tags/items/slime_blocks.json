@@ -18,6 +18,7 @@
     "rainbowslime:slime_red_block",
     "rainbowslime:slime_black_block",
     "rainbowslime:slime_purple_block",
-    "rainbowslime:slime_missing_block"
+    "rainbowslime:slime_missing_block",
+    "rainbowslime:slime_clear_block"
   ]
 }

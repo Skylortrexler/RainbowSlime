@@ -9,6 +9,7 @@ import net.minecraft.util.registry.Registry;
 
 public class initItems {
     public static final Item SLIME_BALL_MISSING = new Item(new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB));
+    public static final Item SLIME_BALL_CLEAR = new Item(new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB));
     public static final Item SLIME_BALL_WHITE = new Item(new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB));
     public static final Item SLIME_BALL_ORANGE = new Item(new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB));
     public static final Item SLIME_BALL_MAGENTA = new Item(new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB));
@@ -28,6 +29,7 @@ public class initItems {
 
     public static void register() {
         Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_ball_missing"), SLIME_BALL_MISSING);
+        Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_ball_clear"), SLIME_BALL_CLEAR);
         Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_ball_white"), SLIME_BALL_WHITE);
         Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_ball_orange"), SLIME_BALL_ORANGE);
         Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_ball_magenta"), SLIME_BALL_MAGENTA);
@@ -50,6 +52,7 @@ public class initItems {
 
         // Block Items
         Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_missing_block"), new BlockItem(initBlocks.SLIME_MISSING_BLOCK, new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB)));
+        Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_clear_block"), new BlockItem(initBlocks.SLIME_CLEAR_BLOCK, new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB)));
         Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_white_block"), new BlockItem(initBlocks.SLIME_WHITE_BLOCK, new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB)));
         Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_orange_block"), new BlockItem(initBlocks.SLIME_ORANGE_BLOCK, new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB)));
         Registry.register(Registry.ITEM, new Identifier(RainbowSlime.MOD_ID, "slime_magenta_block"), new BlockItem(initBlocks.SLIME_MAGENTA_BLOCK, new FabricItemSettings().group(RainbowSlime.CREATIVE_TAB)));

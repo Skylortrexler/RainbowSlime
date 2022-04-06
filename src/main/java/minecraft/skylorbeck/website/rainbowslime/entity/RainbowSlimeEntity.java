@@ -1,5 +1,6 @@
 package minecraft.skylorbeck.website.rainbowslime.entity;
 
+import minecraft.skylorbeck.website.rainbowslime.RainbowSlime;
 import minecraft.skylorbeck.website.rainbowslime.init.initBlocks;
 import minecraft.skylorbeck.website.rainbowslime.init.initItems;
 import net.minecraft.block.Block;
@@ -41,8 +42,8 @@ public class RainbowSlimeEntity extends SlimeEntity {
     @Override
     protected void initDataTracker() {
         super.initDataTracker();
-        this.dataTracker.startTracking(iCOLOUR, world.random.nextInt(17));      // inc 'missing'
-//        setTexture();
+        this.dataTracker.startTracking(iCOLOUR,
+                (this.world.random.nextInt() < RainbowSlime.config.specialChance)?world.random.nextInt(2)+16:world.random.nextInt(17));
     }
 
     @Override
@@ -74,6 +75,7 @@ public class RainbowSlimeEntity extends SlimeEntity {
                     case 14 -> mimic = initItems.SLIME_BALL_RED;
                     case 15 -> mimic = initItems.SLIME_BALL_BLACK;
                     case 16 -> mimic = initItems.SLIME_BALL_MISSING;
+                    case 17 -> mimic = initItems.SLIME_BALL_CLEAR;
                 }
 
                 itemStack = new ItemStack(mimic, lootStack.getCount());
@@ -157,6 +159,7 @@ public class RainbowSlimeEntity extends SlimeEntity {
             case 14 -> mimic = initBlocks.SLIME_RED_BLOCK;
             case 15 -> mimic = initBlocks.SLIME_BLACK_BLOCK;
             case 16 -> mimic = initBlocks.SLIME_MISSING_BLOCK;
+            case 17 -> mimic = initBlocks.SLIME_CLEAR_BLOCK;
         }
 
         return new ItemStackParticleEffect(ParticleTypes.ITEM, new ItemStack(mimic));

@@ -31,7 +31,8 @@ public class RainbowSlimeRenderer extends MobEntityRenderer<RainbowSlimeEntity, 
         new Identifier(RainbowSlime.MOD_ID, "textures/entity/green.png"),
         new Identifier(RainbowSlime.MOD_ID, "textures/entity/red.png"),
         new Identifier(RainbowSlime.MOD_ID, "textures/entity/black.png"),
-        new Identifier(RainbowSlime.MOD_ID,"textures/entity/missing.png")};
+        new Identifier(RainbowSlime.MOD_ID,"textures/entity/missing.png"),
+        new Identifier(RainbowSlime.MOD_ID,"textures/entity/clear.png")};
 
     public RainbowSlimeRenderer(EntityRendererFactory.Context context) {
         super(context, new SlimeEntityModel<>(context.getPart(EntityModelLayers.SLIME)), 0.25F);
@@ -42,12 +43,6 @@ public class RainbowSlimeRenderer extends MobEntityRenderer<RainbowSlimeEntity, 
     public Identifier getTexture(RainbowSlimeEntity entity) {
         int d = entity.getDataTracker().get(RainbowSlimeEntity.iCOLOUR);
         return LOCS[d];
-//        if (d == 16)
-//            return new Identifier(CrimsonSlimes.MOD_ID, "textures/entity/missing.png");
-//        else
-//            return new Identifier(CrimsonSlimes.MOD_ID, "textures/entity/" + DyeColor.byId(d).getName() + ".png");
-
-//        return entity.texture;
     }
 
     @Override

@@ -19,6 +19,7 @@ public class initClient implements ClientModInitializer {
         EntityRendererRegistry.register(initEntities.SLIME, RainbowSlimeRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(initBlocks.SLIME_MISSING_BLOCK, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(initBlocks.SLIME_CLEAR_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(initBlocks.SLIME_WHITE_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(initBlocks.SLIME_ORANGE_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(initBlocks.SLIME_MAGENTA_BLOCK, RenderLayer.getTranslucent());

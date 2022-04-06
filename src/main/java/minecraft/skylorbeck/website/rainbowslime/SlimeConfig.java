@@ -7,5 +7,8 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 public class SlimeConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     @ConfigEntry.BoundedDiscrete(min = 0,max =100)
-    int spawnChance = 100;
+    public int spawnChance = 100;
+    @ConfigEntry.Gui.RequiresRestart
+    @ConfigEntry.BoundedDiscrete(min = 0,max =100)
+    public int specialChance = 10;
 }
