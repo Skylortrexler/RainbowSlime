@@ -1,6 +1,6 @@
-package minecraft.skylorbeck.website.rainbowslime.init;
+package website.skylorbeck.minecraft.rainbowslime.init;
 
-import minecraft.skylorbeck.website.rainbowslime.entity.RainbowSlimeEntity;
+import website.skylorbeck.minecraft.rainbowslime.entity.RainbowSlimeEntity;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 
 public class initAttributes {

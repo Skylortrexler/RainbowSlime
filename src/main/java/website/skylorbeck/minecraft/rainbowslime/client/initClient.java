@@ -1,10 +1,9 @@
-package minecraft.skylorbeck.website.rainbowslime.client;
+package website.skylorbeck.minecraft.rainbowslime.client;
 
-import me.shedaniel.autoconfig.AutoConfig;
-import minecraft.skylorbeck.website.rainbowslime.SlimeConfig;
-import minecraft.skylorbeck.website.rainbowslime.entity.RainbowSlimeRenderer;
-import minecraft.skylorbeck.website.rainbowslime.init.initBlocks;
-import minecraft.skylorbeck.website.rainbowslime.init.initEntities;
+import website.skylorbeck.minecraft.rainbowslime.SlimeConfig;
+import website.skylorbeck.minecraft.rainbowslime.entity.RainbowSlimeRenderer;
+import website.skylorbeck.minecraft.rainbowslime.init.initBlocks;
+import website.skylorbeck.minecraft.rainbowslime.init.initEntities;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -37,6 +36,5 @@ public class initClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(initBlocks.SLIME_RED_BLOCK, RenderLayer.getTranslucent());
         BlockRenderLayerMap.INSTANCE.putBlock(initBlocks.SLIME_BLACK_BLOCK, RenderLayer.getTranslucent());
 
-        AutoConfig.getGuiRegistry(SlimeConfig.class);
     }
 }

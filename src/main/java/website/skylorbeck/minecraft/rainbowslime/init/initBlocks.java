@@ -1,6 +1,6 @@
-package minecraft.skylorbeck.website.rainbowslime.init;
+package website.skylorbeck.minecraft.rainbowslime.init;
 
-import minecraft.skylorbeck.website.rainbowslime.RainbowSlime;
+import website.skylorbeck.minecraft.rainbowslime.RainbowSlime;
 import net.minecraft.block.*;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;

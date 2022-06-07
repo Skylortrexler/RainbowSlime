@@ -1,8 +1,9 @@
-package minecraft.skylorbeck.website.rainbowslime.entity;
+package website.skylorbeck.minecraft.rainbowslime.entity;
 
-import minecraft.skylorbeck.website.rainbowslime.RainbowSlime;
-import minecraft.skylorbeck.website.rainbowslime.init.initBlocks;
-import minecraft.skylorbeck.website.rainbowslime.init.initItems;
+import website.skylorbeck.minecraft.rainbowslime.RainbowSlime;
+import website.skylorbeck.minecraft.rainbowslime.SlimeConfig;
+import website.skylorbeck.minecraft.rainbowslime.init.initBlocks;
+import website.skylorbeck.minecraft.rainbowslime.init.initItems;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityData;
@@ -43,7 +44,7 @@ public class RainbowSlimeEntity extends SlimeEntity {
     protected void initDataTracker() {
         super.initDataTracker();
         this.dataTracker.startTracking(iCOLOUR,
-                (this.world.random.nextInt() < RainbowSlime.config.specialChance)?world.random.nextInt(2)+16:world.random.nextInt(17));
+                (this.world.random.nextInt() < SlimeConfig.specialChance)?world.random.nextInt(2)+16:world.random.nextInt(17));
     }
 
     @Override
@@ -116,7 +117,7 @@ public class RainbowSlimeEntity extends SlimeEntity {
             return removeClickEvents(text);
 
         else
-            return new LiteralText(getDefaultName().getString() + " (" + new TranslatableText("colour." + this.getDataTracker().get(iCOLOUR)).getString() + ")");
+            return Text.literal(getDefaultName().getString() + " (" + Text.translatable("colour." + this.getDataTracker().get(iCOLOUR)).getString() + ")");
     }
 
     private static Text removeClickEvents(Text textComponent) {
@@ -197,7 +198,7 @@ public class RainbowSlimeEntity extends SlimeEntity {
         }
 
         this.setRemoved(reason);
-        if (reason == Entity.RemovalReason.KILLED) this.emitGameEvent(GameEvent.ENTITY_KILLED);
+        if (reason == Entity.RemovalReason.KILLED) this.emitGameEvent(GameEvent.ENTITY_DIE);
 
 //        super.remove(reason);
     }

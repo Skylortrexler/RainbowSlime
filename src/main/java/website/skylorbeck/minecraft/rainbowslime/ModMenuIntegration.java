@@ -1,16 +1,16 @@
-package minecraft.skylorbeck.website.rainbowslime;
+package website.skylorbeck.minecraft.rainbowslime;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
-import me.shedaniel.autoconfig.AutoConfig;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import website.skylorbeck.minecraft.skylorlib.MidnightConfig;
 
 @Environment(EnvType.CLIENT)
 public class ModMenuIntegration implements ModMenuApi {
 
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> AutoConfig.getConfigScreen(SlimeConfig.class, parent).get();
+        return parent -> MidnightConfig.getScreen(parent,RainbowSlime.MOD_ID);
     }
 }

@@ -1,6 +1,6 @@
-package minecraft.skylorbeck.website.rainbowslime.entity;
+package website.skylorbeck.minecraft.rainbowslime.entity;
 
-import minecraft.skylorbeck.website.rainbowslime.RainbowSlime;
+import website.skylorbeck.minecraft.rainbowslime.RainbowSlime;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.entity.EntityRendererFactory;
