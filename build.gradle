@@ -1,7 +1,8 @@
 plugins {
-    id 'fabric-loom' version '0.12-SNAPSHOT'
+    id 'fabric-loom' version '1.0-SNAPSHOT'
     id 'maven-publish'
 }
+
 
 version = project.mod_version
 group = project.maven_group
@@ -21,8 +22,8 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "website.skylorbeck.minecraft:SkylorLib:${project.skylib_version}"
-
     modRuntimeOnly "com.terraformersmc:modmenu:${project.mod_menu_version}"
+
 }
 
 processResources {
